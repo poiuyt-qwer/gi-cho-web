@@ -1,0 +1,11 @@
+.highlight {
+background-color: yellow;
+}
+.error {
+background-color: lightcoral;
+border: red;
+}
+body{
+    background-color:rgb(213, 255, 241);
+    text-align: center;
+}
