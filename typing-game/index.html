@@ -19,9 +19,18 @@
         <p id="quote"></p>
         <p id="message"></p>
         <div>
-            <input type="text" aria-label="current word" id="typed-value" />
+            <input type="text" aria-label="current word" id="typed-value" disabled="false">
             <button type="button" id="start">start</button>
         </div>
+        <!-- Result Modal -->
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <p id="modal-message"></p>
+                <p id="best-score"></p>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
 </html>
