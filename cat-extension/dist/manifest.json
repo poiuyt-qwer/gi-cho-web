@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Make Cat Great Again",
+  "version": "1.0.0",
+  "description": "magic mirror for the greatest of all animals",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "make cat great again"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://cataas.com/*",
+    "https://catfact.ninja/*",
+    "https://data.fixer.io/*"
+  ]
+}

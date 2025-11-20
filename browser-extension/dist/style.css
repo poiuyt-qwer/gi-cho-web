@@ -1,0 +1,162 @@
+/* body{text-align:center}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle;font-size:100%}
+button{border:0 none;background-color:transparent;cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+body{-webkit-text-size-adjust:none}
+input[type='text'],input[type='password'],input[type='submit'],input[type='search'],input[type='tel'],input[type='email'],html input[type='button'],input[type='reset']{-webkit-appearance:none;border-radius:0}
+input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:'Malgun Gothic','맑은 고딕',sans-serif;color:#333}
+a{color:#333;text-decoration:none}
+a:active, a:hover{text-decoration:none}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal} */
+/* 기본 리셋 (기존 코드) */
+body{text-align:center}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle;font-size:100%}
+button{border:0 none;background-color:transparent;cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+body{-webkit-text-size-adjust:none}
+input[type='text'],input[type='password'],input[type='submit'],input[type='search'],input[type='tel'],input[type='email'],html input[type='button'],input[type='reset']{-webkit-appearance:none;border-radius:0}
+input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:'Malgun Gothic','맑은 고딕',sans-serif;color:#333}
+a{color:#333;text-decoration:none}
+a:active, a:hover{text-decoration:none}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+
+/* ===== 레이아웃 / 스타일 ===== */
+
+/* 전체 카드 영역을 가운데로 */
+body {
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+}
+
+/* 확장 프로그램 팝업처럼 세로로 긴 카드 */
+.container {
+    width: 340px;
+    padding: 24px 16px 32px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* 세로 방향 */
+    align-items: center;    /* 가운데 정렬 */
+}
+
+/* 이미지 - 가운데 정렬 & 아래 여백 */
+.container img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 90%;
+    height: auto;
+}
+
+/* 메인 타이틀 */
+.container h1 {
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+/* 서브 타이틀 */
+.form-data h2 {
+    font-size:16px;
+    font-weight:400;
+    margin-bottom:22px;
+}
+
+/* form-data 전체 */
+.form-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+}
+
+/* form 내부 간격 */
+.form-data > div {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+/* label, input, 버튼 정렬 */
+.form-data label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #555;
+}
+
+.form-data input[type="text"] {
+    width: 100%;
+    padding: 10px 14px;
+    background: #f3f4f6;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-btn {
+    margin-top: 18px;
+    padding: 10px 32px;
+    border-radius: 20px;
+    background: #007bff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* 초기에는 결과 영역 숨김 (JS에서 display 바꿔서 사용) */
+.result {
+    margin-top:24px;
+}
+
+/* 결과 카드 텍스트 */
+.result-container {
+    margin-bottom:16px;
+}
+
+.result-container p {
+    margin-bottom:6px;
+    font-size:14px;
+}
+
+/* Change region 버튼 */
+.clear-btn {
+    margin:0 auto;
+    padding:8px 22px;
+    border-radius:18px;
+    background:#007bff;
+    color:#fff;
+    font-size:13px;
+}
+
+/* 로딩/에러 텍스트 */
+.loading,
+.errors {
+    font-size:12px;
+    margin-bottom:8px;
+    color:#666;
+}
+
+/* strong을 굵게 보이지 않게 */
+strong {
+    font-weight:400;
+}
